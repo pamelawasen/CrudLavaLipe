@@ -1,0 +1,24 @@
+<div style="display:flex;flex-direction: row;  height: 500px"> 
+  <div class="sidebar" style="flex:1;" >
+    <h3>Ações</h3>
+    <ul>  
+      <li>
+        <a routerLink="/create" routerLinkActive="active" >Novo Cliente</a>
+      </li>
+    </ul>
+  </div>
+    <div style="flex:9;" >
+      <div style="display:flex; flex-direction: column;">
+        <div class="sidebar-header" style="flex:1;text-align: end;">
+        LOGADO
+       </div>
+        <div class="content" style="flex:1;">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+</div>
+</div>
+        
+       
+ 

@@ -1,0 +1,27 @@
+<div>
+  <h3>Editar</h3>
+<form>
+    <div class="form-group">
+      <label for="name">Nome:</label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="cliente.name" id="name" >
+    </div>
+    <div class="form-group">
+      <label for="identify">CNPJ/CPF</label>
+      <input type="text" class="form-control" name="cpfcnpj" [(ngModel)]="cliente.cpfcnpj" id="cpfcnpj" >
+    </div>
+    <div class="form-group">
+        <label for="celular">Celular</label>
+        <input type="text" class="form-control" name="phone" [(ngModel)]="cliente.phone" id="phone" >
+      </div>
+      <button type="button" class="btn btn-primary" (click)="editar() "routerLink="" routerLinkActive="active" >Salvar</button>
+  </form>
+  <a routerLink="" routerLinkActive="active">Voltar para a lista</a>
+</div>
+
+<script>
+  jQuery(function($){
+  $("#campoData").mask("99/99/9999");
+  $("#campoTelefone").mask("(999) 999-9999");
+  $("#campoSenha").mask("***-****");
+  });
+  </script>

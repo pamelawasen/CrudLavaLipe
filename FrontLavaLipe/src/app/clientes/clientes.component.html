@@ -1,0 +1,27 @@
+<div>
+    <h1>Lista de Clientes</h1>
+
+    <table class="table table-striped" >
+        <thead >
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">CPF/CNPJ</th>
+            <th scope="col">Telefone</th>
+            <th > </th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor ="let cliente of clientes">
+            <td>{{cliente.name}}</td>
+            <td>{{cliente.cpfcnpj}}</td>
+            <td>{{cliente.phone}}</td>
+            <td>
+                <a [routerLink]="['/edit/', cliente.id]" routerLinkActive="active" >Editar</a> 
+                
+                / <button  class="btn btn-link" (click)="remover(cliente.id)"> Excluir</button>
+            </td>
+          </tr>
+        
+        </tbody>
+      </table>
+</div>
